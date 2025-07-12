@@ -7,7 +7,7 @@ import Limpiar from './Limpiar'
 function Carcasa() {
   return (
     <div className="carcasa">
-      <h1>LRS Calculadoras</h1>
+      <h1>Calculadoras<br/>LRS</h1>
       <Display></Display>
       <Operador id="add"></Operador>
       <Operador id="subtract"></Operador>
