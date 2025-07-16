@@ -13,10 +13,10 @@ body, #root {
 
 .carcasa {
   width: 32rem;
-  height: 90vh;
-  min-height: 600px;
+  height: 100vh;
+  min-height: 700px;
   background-color: #1E1E1E;
-  margin-top: 2rem;
+  margin-top: 1rem 0;
   border-radius: 3%;
 }
 
@@ -27,9 +27,9 @@ h1 {
   font-weight: 400;
   font-style: normal;
   text-transform: uppercase;
-  height: 20%;
+  height: 10%;
   font-size: 3rem;
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
 #display {
@@ -44,12 +44,14 @@ h1 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0.2rem;
-  height: 50%;
+  height: 55%;
   justify-content: center;
   align-items: center;
+  padding: 0.8rem 2rem;
 }
 
 button {
-  width: 5rem;
-  height: 3rem;
+  width: 90%;
+  height: 75%;
+  margin: auto;
 }
