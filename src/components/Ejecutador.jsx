@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Ejecutador() {
+function Ejecutador({children}) {
   return (
-    <button className="botones-oscuros" id="equals"></button>
+    <button className="botones-oscuros" id="equals">{children}</button>
   )
 }
 

@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Numero({ id }) {
+function Numero({ id, children }) {
   return (
-    <button className="boton-estandar" id={id}></button>
+    <button className="boton-estandar" id={id}>{children}</button>
   )
 }
 

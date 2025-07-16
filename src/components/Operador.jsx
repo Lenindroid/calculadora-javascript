@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Operation({ id }) {
+function Operation({ id, children }) {
   return (
-    <button className="boton-operador" id={id}></button>
+    <button className="boton-operador" id={id}>{children}</button>
   )
 }
 

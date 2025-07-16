@@ -10,10 +10,10 @@ function Carcasa() {
       <h1>Calculadoras<br/>LRS</h1>
       <Display></Display>
       <div className="grid-botones">
-        <Operador id="add"></Operador>
-        <Operador id="subtract"></Operador>
-        <Operador id="multiply"></Operador>
-        <Operador id="divide"></Operador>
+        <Operador id="add">+</Operador>
+        <Operador id="subtract">-</Operador>
+        <Operador id="multiply">×</Operador>
+        <Operador id="divide">÷</Operador>
         <Numero id="one">1</Numero>
         <Numero id="two">2</Numero>
         <Numero id="three">3</Numero>
@@ -25,7 +25,7 @@ function Carcasa() {
         <Numero id="nine">9</Numero>
         <Numero id="zero">0</Numero>
         <Numero id="decimal">.</Numero>
-        <Limpiar></Limpiar>
+        <Limpiar>=</Limpiar>
       </div>
     </div>
   )

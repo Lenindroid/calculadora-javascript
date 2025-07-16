@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Limpiar() {
+function Limpiar({ children }) {
   return (
-    <button className="botones-oscuros" id="clear" ></button>
+    <button className="botones-oscuros" id="clear" >{children}</button>
   )
 }
 
