@@ -12,7 +12,7 @@ body, #root {
 }
 
 .carcasa {
-  width: 35rem;
+  width: 32rem;
   height: 90vh;
   min-height: 600px;
   background-color: #1E1E1E;
@@ -38,4 +38,18 @@ h1 {
   width: 80%;
   margin: auto;
   border-radius: 7%;
+}
+
+.grid-botones {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.2rem;
+  height: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  width: 5rem;
+  height: 3rem;
 }
