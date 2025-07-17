@@ -1,30 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Operador from './Operador'
 import Display from './Display'
 import Numero from './Numero'
 import Limpiar from './Limpiar'
 
 function Carcasa() {
+  const [currentOperation, setOperation] = useState('');
+  function addChar(character) {
+    setOperation(currentOperation.concat(character));
+  }
   return (
     <div className="carcasa">
       <h1>Calculadoras<br/>LRS</h1>
-      <Display></Display>
+      <Display currentOperation={currentOperation}></Display>
       <div className="grid-botones">
-        <Operador id="add">+</Operador>
-        <Operador id="subtract">-</Operador>
-        <Operador id="multiply">×</Operador>
-        <Operador id="divide">÷</Operador>
-        <Numero id="one">1</Numero>
-        <Numero id="two">2</Numero>
-        <Numero id="three">3</Numero>
-        <Numero id="four">4</Numero>
-        <Numero id="five">5</Numero>
-        <Numero id="six">6</Numero>
-        <Numero id="seven">7</Numero>
-        <Numero id="eight">8</Numero>
-        <Numero id="nine">9</Numero>
-        <Numero id="zero">0</Numero>
-        <Numero id="decimal">.</Numero>
+        <Operador id="add" addChar={addChar}>+</Operador>
+        <Operador id="subtract" addChar={addChar}>-</Operador>
+        <Operador id="multiply" addChar={addChar}>x</Operador>
+        <Operador id="divide" addChar={addChar}>÷</Operador>
+        <Numero id="one" addChar={addChar}>1</Numero>
+        <Numero id="two" addChar={addChar}>2</Numero>
+        <Numero id="three" addChar={addChar}>3</Numero>
+        <Numero id="four" addChar={addChar}>4</Numero>
+        <Numero id="five" addChar={addChar}>5</Numero>
+        <Numero id="six" addChar={addChar}>6</Numero>
+        <Numero id="seven" addChar={addChar}>7</Numero>
+        <Numero id="eight" addChar={addChar}>8</Numero>
+        <Numero id="nine" addChar={addChar}>9</Numero>
+        <Numero id="zero" addChar={addChar}>0</Numero>
+        <Numero id="decimal" addChar={addChar}>.</Numero>
         <Limpiar>=</Limpiar>
       </div>
     </div>

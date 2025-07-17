@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Display() {
+function Display({ currentOperation }) {
   return (
     <div id="display">
-      
+      {currentOperation}
     </div>
   )
 }
