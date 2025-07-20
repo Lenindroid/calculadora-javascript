@@ -1,7 +1,7 @@
 import './App.css'
 import Carcasa from './components/carcasa'
 function App() {
-  console.log("hey bro");
+ console.error("ERROR NO ESTÁS SUSCRITO");
 
   return (
     <>
