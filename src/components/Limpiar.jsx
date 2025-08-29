@@ -1,8 +1,13 @@
 import React from 'react'
 
-function Limpiar({ children }) {
+function Limpiar({ children, setOperation }) {
+
+  function clearOperation() {
+    setOperation('');
+  }
+
   return (
-    <button className="botones-oscuros" id="clear" >{children}</button>
+    <button className="botones-oscuros" id="clear" onClick={clearOperation}>{children}</button>
   )
 }
 
