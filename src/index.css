@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Turret+Road:wght@200;300;400;500;700;800&display=swap');
+
+@font-face {
+  font-family: digital-7;
+  src: url(/digital-7.ttf) format("truetype");
+  font-family: "digital-7";
+}
+
+
 body, #root {
   box-sizing: border-box;
   padding: 0;
@@ -34,10 +43,19 @@ h1 {
 
 #display {
   background-color: #84FC9A;
-  height: 20%;
+  height: 15%;
   width: 80%;
   margin: auto;
-  border-radius: 7%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 3rem;
+  padding: 0.1rem 1rem;
+  font-family: "digital-7", "sans-serif";
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 2px;
+  overflow: scroll;
 }
 
 .grid-botones, .grid-operadores {
