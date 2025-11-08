@@ -55,7 +55,7 @@ h1 {
   font-weight: 700;
   font-style: normal;
   letter-spacing: 2px;
-  overflow: scroll;
+  overflow: clip;
 }
 
 .grid-botones, .grid-operadores {
