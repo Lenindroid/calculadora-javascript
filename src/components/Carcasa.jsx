@@ -40,7 +40,7 @@ function Carcasa() {
         <Numero id="nine" addChar={addChar}>9</Numero>
         <Numero id="zero" addChar={addChar}>0</Numero>
         <Numero id="decimal" addChar={addChar}>.</Numero>
-        <Ejecutador>=</Ejecutador>
+        <Ejecutador setOperation={setOperation} currentOperation={currentOperation}>=</Ejecutador>
       </div>
     </div>
   )
