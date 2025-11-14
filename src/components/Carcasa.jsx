@@ -8,6 +8,13 @@ import Ejecutador from './Ejecutador'
 function Carcasa() {
   const [currentOperation, setOperation] = useState('');
   function addChar(character) {
+    if (currentOperation.length >= 2 &&
+      ( (character == '.') && currentOperation[currentOperation.length - 1] == '.' 
+        || (character == '+') && currentOperation[currentOperation.length - 1] == '+'
+        || (character == '-') && currentOperation[currentOperation.length - 1] == '-'
+        || (character == '÷') && currentOperation[currentOperation.length - 1] == '÷'
+        || (character == 'x') && currentOperation[currentOperation.length - 1] == 'x'
+      )) return;
     setOperation(currentOperation.concat(character));
   }
   return (
