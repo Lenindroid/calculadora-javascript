@@ -13,7 +13,10 @@ function Ejecutador({children, currentOperation, setOperation}) {
       if (!charAllowed.test(currentOperation)) console.log("Hay caracteres invalidos");
       if (consecutiveOps.test(currentOperation)) console.log("No pueden haber simbolos especiales consecutivos.");
       setOperation("ERROR");
+      return;
     }
+
+    
   }
 
   return (
