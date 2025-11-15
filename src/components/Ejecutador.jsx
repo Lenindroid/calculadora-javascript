@@ -15,7 +15,9 @@ function Ejecutador({children, currentOperation, setOperation}) {
       setOperation("ERROR");
       return;
     }
-
+    const tokenizerRegex = /\d+(?:\.\d+)?|[÷+\-x]/g;
+    const tokens = currentOperation.match(tokenizerRegex);
+    console.log(tokens);
     
   }
 
