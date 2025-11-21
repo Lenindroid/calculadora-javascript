@@ -6,23 +6,40 @@ import Limpiar from './Limpiar'
 import Ejecutador from './Ejecutador'
 
 function Carcasa() {
-  const [currentOperation, setOperation] = useState('');
+  const [currentOperation, setOperation] = useState('0');
   function addChar(character) {
-    if (currentOperation.length >= 2 &&
-      ( (character == '.') && currentOperation[currentOperation.length - 1] == '.' 
-        || (character == '+') && currentOperation[currentOperation.length - 1] == '+'
-        || (character == '-') && currentOperation[currentOperation.length - 1] == '-'
-        || (character == '÷') && currentOperation[currentOperation.length - 1] == '÷'
-        || (character == 'x') && currentOperation[currentOperation.length - 1] == 'x'
-      )) return;
-    setOperation(currentOperation.concat(character));
+    if (
+      ['.', '+', '-', '÷', 'x'].includes(character) && 
+        currentOperation.length > 0 && 
+      ['.', '+', '-', '÷', 'x'].includes(currentOperation[currentOperation.length - 1])
+    ) return;
+
+      if (currentOperation.length == 2 && currentOperation[1] != '.') setOperation(currentOperation.slice(1));
+      
+    setOperation(prev=> {
+      if (prev === '0' && ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'].includes(character)) {
+        return character; 
+      }
+        
+      if (prev === '0' && character === '.') {
+        return prev + character;
+      }
+        
+      if (prev === 'ERROR') {
+        return character; 
+      }
+
+      return prev + character;
+    });
   }
+
+
   return (
     <div className="carcasa">
       <h1>Calculadoras<br/>LRS</h1>
       <Display currentOperation={currentOperation}></Display>
       <div className="grid-operadores">
-        <Limpiar setOperation={setOperation} currentOperation={currentOperation}>DEL</Limpiar>
+        <Limpiar setOperation={setOperation} currentOperation={currentOperation}>AC</Limpiar>
         <Operador id="add" addChar={addChar}>+</Operador>
         <Operador id="subtract" addChar={addChar}>-</Operador>
         <Operador id="multiply" addChar={addChar}>x</Operador>

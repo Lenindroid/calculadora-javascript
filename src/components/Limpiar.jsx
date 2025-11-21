@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Limpiar({ children, setOperation, currentOperation }) {
+function Limpiar({ children, setOperation}) {
 
   function clearOperation() {
-    setOperation(currentOperation.slice(0, -1));
+    setOperation('0');
   }
 
   return (
