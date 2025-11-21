@@ -39,6 +39,7 @@ function Ejecutador({children, currentOperation, setOperation}) {
       if (tokens[i] == '-') result -= parseFloat(tokens[i + 1]);
       else if (tokens[i] == '+') result += parseFloat(tokens[i + 1]);
     }
+    result = parseFloat(result.toFixed(10));
 
     setOperation(result.toString());
   }
