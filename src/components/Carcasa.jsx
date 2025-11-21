@@ -22,7 +22,7 @@ function Carcasa() {
       <h1>Calculadoras<br/>LRS</h1>
       <Display currentOperation={currentOperation}></Display>
       <div className="grid-operadores">
-        <Limpiar setOperation={setOperation}>AC</Limpiar>
+        <Limpiar setOperation={setOperation} currentOperation={currentOperation}>DEL</Limpiar>
         <Operador id="add" addChar={addChar}>+</Operador>
         <Operador id="subtract" addChar={addChar}>-</Operador>
         <Operador id="multiply" addChar={addChar}>x</Operador>
