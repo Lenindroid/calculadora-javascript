@@ -28,6 +28,12 @@ function Carcasa() {
         return character; 
       }
 
+      const lastOp = Math.max(prev.lastIndexOf('+'), prev.lastIndexOf('-'), prev.lastIndexOf('x'), prev.lastIndexOf('÷'));
+      const currentNumberSegment = prev.slice(lastOp + 1);
+      if (character === '.' && currentNumberSegment.includes('.')) {
+        return prev; 
+      }
+
       return prev + character;
     });
   }
