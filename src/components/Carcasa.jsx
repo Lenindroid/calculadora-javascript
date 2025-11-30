@@ -12,7 +12,13 @@ function Carcasa() {
       ['.', '+', '-', '÷', 'x'].includes(character) && 
         currentOperation.length > 0 && 
       ['.', '+', '-', '÷', 'x'].includes(currentOperation[currentOperation.length - 1])
-    ) return;
+    ) {
+      if (character != '-' && currentOperation[currentOperation.length - 1] != '-') {
+        setOperation(currentOperation.slice(0, -1) + character);
+      }
+      if (character != '-') return;
+    }
+      
 
       
     setOperation(prev=> {

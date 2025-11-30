@@ -18,6 +18,15 @@ function Ejecutador({children, currentOperation, setOperation}) {
     const tokenizerRegex = /\d+(?:\.\d+)?|[÷+\-x]/g;
     let tokens = currentOperation.match(tokenizerRegex);
 
+    /*
+
+    tokens.forEach((e, i) => {
+        if (['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'].includes(e) && tokens[i - 1] == '-') {
+          tokens[i] = (-1 * parseFloat(e)).toString();
+          tokens[i - 1] = '_';
+        }
+    });
+    tokens = tokens = tokens.filter(e=> e != '_'); */
 
     tokens.forEach((e, i) => {
       if (e == 'x' ) {
